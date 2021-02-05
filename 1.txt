@@ -1,0 +1,62 @@
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC70/d7vYa3DFZpGajoNHOo5qgg1gzW1XslTt0s3dyLuIg4gKjKE4gwe2JmlOQBw4iGoLD8S33gxf/MT7rqRKR+nwNtdEIH3PFqj9cSvzkp4icbf1hGHdSrQ8zjwg7eEYE6XdNXk
+O6VH6N1z82dMSFwGqjeNDfCl/jbzszpYXdQMKHbPs9Np9PUFsUvJxUTFOxTuShv9Wz2ycavyWIlom6rpcr4Az8ZJ/vGi4Pj1uZJVDQPyatrJID6kbRZv0TB2TCVrpQGhy7t1OvNOikFeG4wrJDGwFcHr4392KSCVsaPsOyd32vEvC
+pfvViDaxphK2k9aIPrsddRV5PX6Rm2TLUq5rR8x7OwojHoNZybpbITmMbzZvk2JW6HWEb/l6m77Zru8LYgj4quhCIYpCdju1zU2QwLjPAIQkHOiPbP85+inW3XqdumYkKcmycdk1OjcGvV4DU9dsg7N+J4AjG2SiyoU3Wb2i4XOZO
+GbGq/AOLQpH3YAt5KMkDdJpSae1xT5NM= ubuntu@ip-172-31-42-171
+
+
+
+drwxrwxr-x 7 ubuntu ubuntu 4096 Feb  5 11:06 .git/
+-rw-rw-r-- 1 ubuntu ubuntu    6 Feb  5 10:34 index.html
+ubuntu@ip-172-31-42-171:~/dev/fortest$ git remote add origin git@github.com:valerchik666/RepForTest.git
+fatal: remote origin already exists.
+ubuntu@ip-172-31-42-171:~/dev/fortest$ sudo git remote add origin git@github.com:valerchik666/RepForTest.git
+fatal: remote origin already exists.
+ubuntu@ip-172-31-42-171:~/dev/fortest$ ls
+index.html
+ubuntu@ip-172-31-42-171:~/dev/fortest$ ll
+total 16
+drwxrwxr-x 3 ubuntu ubuntu 4096 Feb  5 10:34 ./
+drwxrwxr-x 3 ubuntu ubuntu 4096 Feb  5 10:31 ../
+drwxrwxr-x 7 ubuntu ubuntu 4096 Feb  5 11:06 .git/
+-rw-rw-r-- 1 ubuntu ubuntu    6 Feb  5 10:34 index.html
+ubuntu@ip-172-31-42-171:~/dev/fortest$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+new file:   index.html
+
+ubuntu@ip-172-31-42-171:~/dev/fortest$ git commit -m 'first'
+[master (root-commit) fb6a890] first
+ Committer: Ubuntu <ubuntu@ip-172-31-42-171.eu-west-2.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.html
+ubuntu@ip-172-31-42-171:~/dev/fortest$ git push origin head
+error: src refspec head does not match any
+error: failed to push some refs to 'git@github.com:valerchik666/RepForTest.git'
+ubuntu@ip-172-31-42-171:~/dev/fortest$ git push origin HEAD
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,140.82.121.3' (RSA) to the list of known hosts.
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 233 bytes | 233.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:valerchik666/RepForTest.git
+ * [new branch]      HEAD -> master
+ubuntu@ip-172-31-42-171:~/dev/fortest$ 
